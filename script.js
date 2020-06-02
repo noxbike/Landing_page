@@ -7,14 +7,23 @@ $(function(){
     })
 
     $('.menu-deroulant').click(function(){
-        $('#menu').show();
-        $('.menu-deroulant').hide();
-        $('#close-menu').show();
-    })
-
-    $('#close-menu').click(function(){
-        $('#menu').hide();
-        $('.menu-deroulant').show();
-        $('#close-menu').hide();
+        var menuPhone = $('.menu').val();
+        if(menuPhone == null)
+        {
+            var text = $('<div>', {class: 'menu'})
+            text.css('font-size', '4em');
+            text.html(`<ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>Services</a></li>
+            <li><a href='#'>Pricing</a></li>
+            <li><a href='#'>About us</a></li>
+            <li id='search'><i class="fas fa-search fa"></i></li>
+            </ul>`);
+            text.appendTo('#logo-welcome');
+        }
+        else
+        {
+            $('.menu').remove();
+        }
     })
 })
