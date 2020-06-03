@@ -1,3 +1,4 @@
+/* presentation*/
 body{
     margin: 0px;
     padding: 0%;
@@ -5,26 +6,6 @@ body{
     background-color: rgb(30, 30, 30);
     color:white;
     font-family: sans-serif;
-}
-
-#menu{
-    display: none;
-    font-size:2em;
-    
-}
-
-ul, a{
-    color:white;
-    text-align: left;
-    text-decoration:none;
-    list-style: none;
-}
-
-nav{
-    padding:0% 3% 0% 3%;
-    font-size:3em;
-    display:flex;
-    flex-direction: row;
 }
 
 #page{
@@ -36,30 +17,76 @@ nav{
     padding:0%;
     height:100%;
     background: rgb(255,0,0);
-    background: linear-gradient(25deg, rgb(29, 29, 29) 50%, rgba(0, 0, 0, 0) 30%);
+    background: linear-gradient(25deg, rgb(29, 29, 29) 50%, rgba(0, 0, 0, 0.397) 30%);
     text-align: center;
     align-items: center;
 
 }
+/* presentation*/
+
+/*header*/
+nav{
+    width:100%; 
+    font-size:3em;
+    display:flex;
+    flex-direction: row;
+}
 
 .menu-deroulant{
-    margin-top: 5%;
-}
-
-.menu{
-    width: 20%;
-    margin-left: 60%;
-}
-
-.fa-bars, #logo-company{
-    color:black;
+    text-align: right;
+    margin-top: 3%;
+    width:50%;
+    padding:2%;
 }
 
 #logo-company{
-    width: 100%;
     text-align: left;
+    width: 50%;
 }
 
+#menu{
+    display: none;
+    position: absolute;
+    margin-left:20%;
+    opacity: 0;
+}
+
+ul, a{
+    color:white;
+    text-align: left;
+    text-decoration:none;
+    list-style: none;
+}
+
+#search{
+    display: none;
+}
+
+i{
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#logo-welcome .barSearch{
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    width:50%;
+    height:8%;
+    margin-right: 1%;
+    border-radius: 50px;
+    font-size: 0.8em;
+    border: none;
+    box-shadow: 2px 8px 20px;
+}
+
+input:focus, button{
+    outline-style:none;
+}
+/*header*/
+
+/*content*/
 main{
     height: 100%;
     display: flex;
@@ -98,51 +125,50 @@ button{
     border: 2px solid white;
 }
 
+#logo-welcome #search{
+    font-size: 4em;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+/*content*/
 
 
 @media screen and (min-width: 1200px)
 {
+    /* mise en page*/
     body{
         padding: 2%;
     }
+
     #page{
         height:100%;
         padding-bottom: 6%;
-        background-image: url('font2.jpg');
-        background-size: cover;
         border-radius: 10px;
         box-shadow: 12px 12px 24px 5px black;
     }
     
     #masque{
         padding:3%;
-        height:100%;
         text-align: left;
         border-radius: 10px;
-        background: rgb(255,0,0);
-        background: linear-gradient(120deg, rgb(29, 29, 29) 56%, rgba(0, 0, 0, 0) 30%);
+        background: linear-gradient(120deg, rgb(29, 29, 29) 56%, rgba(0, 0, 0, 0.397) 30%);
     }
+    /* mise en page*/
 
-    main{
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
+    /*header*/
     nav{
-        background: none;
         font-size:1em;
-        display:flex;
-        flex-direction: row;
         justify-content: space-around;
     }
 
-    .menu-deroulant{
+    #icon{
         display: none;
     }
 
-    #menu, #landing-text, #logo-welcome, #logo-company{
+    #landing-text, #logo-welcome, #logo-company{
         color: white;
         font-size:1em;
         display:block;
@@ -150,49 +176,53 @@ button{
         
     }
 
-    #menu ul, ul a{
-        background: none;
+    .menu-deroulant{
+        margin-top: 0%;
+    }
+
+    #menu{
+        display: block;
+        margin:0%;
+        position: relative;
+        opacity: 1;
+    }
+
+    #menu #search{
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    .barSearch{
+        width:0%;
+        margin-right: 1%;
+        opacity: 0;
+        border-radius: 10px;
+        font-size: 1em;
+        box-shadow: 2px 4px 20px;
     }
     
     #menu ul{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        list-style: none;
     }
     
     a{  
         padding-bottom:10%;
-        text-decoration: none;
-        color:white;
     }
     
     a:hover{
         border-bottom: 2px solid white;
     }
 
-    #search{
-        display:flex;
-        flex-direction: row-reverse;
-    }
-    
-    .barSearch{
-        
-        padding:3%;
-        opacity: 0;
-        width:0%;
-        margin-right: 5%;
-        border-radius: 10px;
-        border:none;
-        box-shadow: 2px 4px 8px;
-    }
-    
-    input:focus, button{
-        outline-style:none;
-    }
+    /*header*/
 
+    /*content*/
+    main{
+        flex-direction: row;
+    }
+   
     #landing-text div h1{
-        padding: 0% 0% 4% 0%;
         font-size: 4em;
     }
 
@@ -204,4 +234,9 @@ button{
         font-size:1em;
         padding:1% 4% 1% 4%;
     }
+
+    #logo-welcome #search{
+        display:none;
+    }
+    /*content*/
 }
