@@ -34,26 +34,37 @@ nav{
 
 .menu-deroulant{
     text-align: right;
-    margin-top: 3%;
-    width:50%;
+    width:75%;
     padding:2%;
+    font-size: 1.8rem;
 }
 
 #logo-company{
+    font-size: 1.5rem;
     text-align: left;
-    width: 50%;
+    width: 20%;
     margin-left: 2%;
 }
 
 #menu{
+    background-color: white;
     display: none;
     position: absolute;
-    margin-left:20%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
     opacity: 0;
+}
+#menu li{
+    margin: 5% auto;
+}
+#menu a{
+    margin: 2%;
 }
 
 ul, a{
-    color:white;
+    color:black;
     text-align: left;
     text-decoration:none;
     list-style: none;
@@ -83,8 +94,16 @@ i{
     box-shadow: 2px 8px 20px;
 }
 
+.barSearch{
+    max-width: 200px;
+}
+
 input:focus, button{
     outline-style:none;
+}
+
+input{
+    padding: 0.6% 2%;
 }
 /*header*/
 
@@ -99,8 +118,8 @@ main{
 #landing-text{
     height: 60vh;
     margin-top: 10%;
-    width: 100%;
-    font-size: 3em;
+    padding: 0 10%;
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
 }
@@ -111,7 +130,7 @@ main{
 }
 
 #landing-text div h1{
-    padding: 0% 0% 4% 0%;
+    padding-bottom:4%;
 }
 
 .page-design{
@@ -120,7 +139,7 @@ main{
 }
 
 button{
-    font-size:1em;
+    font-size:0.8em;
     color:white;
     background: none;
     padding:1% 5% 1% 5%;
@@ -129,7 +148,7 @@ button{
 }
 
 #logo-welcome #search{
-    font-size: 4em;
+    font-size: 2em;
     height:100%;
     width:100%;
     display:flex;
@@ -138,8 +157,44 @@ button{
 }
 /*content*/
 
+@media screen and (min-width: 768px) {
+    #menu{
+        background: none;
+    }
+    #menu li{
+        margin: 0;
+    }
+    #menu a{
+        color:black;
+        margin: 0;
+    }
+    ul, a{
+        color: white;
+    }
 
-@media screen and (min-width: 1200px)
+    #menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #icon{
+        display: none;
+    }
+    #menu{
+        display: block;
+        margin:0%;
+        height: inherit;
+        position: relative;
+        opacity: 1;
+    }
+    .menu-deroulant{
+        margin-top: 0%;
+    }
+    #close{
+        display: none;
+    }
+}
+@media screen and (min-width: 1100px)
 {
     /* mise en page*/
     body{
@@ -163,35 +218,19 @@ button{
 
     /*header*/
     nav{
-        font-size:1em;
+        font-size:1rem;
         justify-content: space-around;
     }
 
-    #icon{
-        display: none;
-    }
-
-    #landing-text, #logo-welcome, #logo-company{
+    #landing-text, #logo-welcome,#logo-company{
         color: white;
         font-size:1em;
         display:block;
         width: 50%;
-        
     }
 
     #logo-company{
         margin-left: 0%;
-    }
-
-    .menu-deroulant{
-        margin-top: 0%;
-    }
-
-    #menu{
-        display: block;
-        margin:0%;
-        position: relative;
-        opacity: 1;
     }
 
     #menu #search{
@@ -201,17 +240,16 @@ button{
 
     .barSearch{
         width:0%;
-        margin-right: 1%;
+        margin-right: 5%;
         opacity: 0;
         border-radius: 10px;
         font-size: 1em;
         box-shadow: 2px 4px 20px;
+        border-radius: 50px;
     }
-    
-    #menu ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+
+    input{
+        padding:0 4%;
     }
     
     a{  
@@ -235,6 +273,7 @@ button{
 
     #landing-text{
         font-size: 1em;
+        padding: 0;
     }
 
     button{

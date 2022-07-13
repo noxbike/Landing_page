@@ -17,4 +17,7 @@ $(function(){
             $('#menu').hide().css('opacity', 0);
         }
     })
+    $('#close').click(function(){
+        $('#menu').hide().css('opacity', 0);
+    })
 })
